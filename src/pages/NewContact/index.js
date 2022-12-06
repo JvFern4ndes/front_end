@@ -22,6 +22,9 @@ export default function NewContact() {
       <Button type="button">
         Salvar alterações
       </Button>
+      <Button type="button" disabled>
+        Salvar alterações
+      </Button>
     </>
   )
 }
