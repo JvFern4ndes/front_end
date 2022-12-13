@@ -14,6 +14,8 @@ export default function ContactForm({ buttonLabel }) {
   const [phone, setPhone] = useState('');
   const [category, setCategory] = useState('');
 
+  const handleNameChange = (event) => setName(event.target.value);
+
   function handleSubmit(event) {
     event.preventDefault();
 
@@ -28,7 +30,7 @@ export default function ContactForm({ buttonLabel }) {
         <Input
           placeholder='Nome'
           value={name}
-          onChange={(event) => setName(event.target.value)}
+          onChange={handleNameChange}
         />
       </FormGroup>
 
