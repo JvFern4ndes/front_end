@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 
-import { Container, InputSearchContainer, Header, ListContainer, Card } from "./styles";
+import {
+  Container, InputSearchContainer, Header, ListContainer, Card
+} from "./styles";
 
 import arrow from '../../assets/images/icons/arrow.svg';
 import edit from '../../assets/images/icons/edit.svg';
@@ -49,3 +51,11 @@ export default function Home() {
     </Container>
   );
 }
+
+fetch('http://localhost:3000')
+  .then((response) => {
+    console.log('response', response)
+  })
+  .catch((error) => {
+    console.log('erro', error);
+  });
