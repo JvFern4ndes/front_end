@@ -53,7 +53,7 @@ export default function Home() {
 }
 
 fetch('http://localhost:3001/contacts', {
-  method: 'DELETE',
+  method: 'GET',
   headers: new Headers({
     'X-App-ID': '123',
   }),
