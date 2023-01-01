@@ -7,8 +7,23 @@ import {
 import arrow from '../../assets/images/icons/arrow.svg';
 import edit from '../../assets/images/icons/edit.svg';
 import trash from '../../assets/images/icons/trash.svg';
+import { useEffect } from 'react';
 
 export default function Home() {
+  useEffect(() => {
+    fetch('http://localhost:3001/contacts')
+      .then(async (response) => {
+        const json = await response.json();
+        console.log('response', response)
+        json.forEach((contact) => {
+          console.log(contact.name);
+        });
+      })
+      .catch((error) => {
+        console.log('erro', error);
+      });
+  }, []);
+
   return (
     <Container>
       <InputSearchContainer>
@@ -51,15 +66,3 @@ export default function Home() {
     </Container>
   );
 }
-
-fetch('http://localhost:3001/contacts')
-  .then(async (response) => {
-    const json = await response.json();
-    console.log('response', response)
-    json.forEach((contact) => {
-      console.log(contact.name);
-    });
-  })
-  .catch((error) => {
-    console.log('erro', error);
-  });
