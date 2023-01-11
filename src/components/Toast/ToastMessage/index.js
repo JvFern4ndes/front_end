@@ -9,7 +9,7 @@ export default function ToastMessage({ text, type }) {
   console.log(type);
 
   return (
-    <Container>
+    <Container type={type}>
       {type === 'danger' && <img src={xCircleIcon} alt="X" />}
       {type === 'success' && <img src={checkCircleIcon} alt="Check" />}
       <strong>{text}</strong>
