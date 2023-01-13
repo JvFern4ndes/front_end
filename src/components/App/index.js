@@ -14,15 +14,15 @@ import ToastContainer from '../Toast/ToastContainer';
 function App() {
   return (
     <BrowserRouter>
-    <ThemeProvider theme={defaultTheme}>
-      <GlobalStyles />
-      <ToastContainer />
+      <ThemeProvider theme={defaultTheme}>
+        <GlobalStyles />
+        <ToastContainer />
 
-      <Container>
-        <Header />
-        <Routes />
-      </Container>
-    </ThemeProvider>
+        <Container>
+          <Header />
+          <Routes />
+        </Container>
+      </ThemeProvider>
     </BrowserRouter>
   );
 }
