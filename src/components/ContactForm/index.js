@@ -38,19 +38,13 @@ const ContactForm = forwardRef(({ buttonLabel, onSubmit }, ref) => {
       setPhone(formatPhone(contact.phone ?? ''));
       setCategoryID(contact.category_id ?? '');
     },
+    resetFields: () => {
+      setName('');
+      setEmail('');
+      setPhone('');
+      setCategoryID('');
+    },
   }), []);
-
-  // useEffect(() => {
-  //   const refObject = ref;
-  //   refObject.current = {
-      // setFieldsValues:(contact) => {
-      //   setName(contact.name);
-      //   setEmail(contact.email);
-      //   setPhone(contact.phone);
-      //   setCategoryID(contact.category_id);
-      // },
-  //   };
-  // }, [ref]);
 
   useEffect(() => {
     async function loadCategories() {
