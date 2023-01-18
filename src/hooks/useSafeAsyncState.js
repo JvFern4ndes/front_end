@@ -7,7 +7,7 @@ export default function useSafeAsyncState(initialState) {
   const isMounted = useIsMounted();
 
   const setSafeAsyncState = useCallback((data) => {
-    if (isMounted) {
+    if (isMounted()) {
       setState(data);
     }
   }, [isMounted]);

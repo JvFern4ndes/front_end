@@ -5,7 +5,7 @@ export default function useSafeAsyncAction() {
   const isMounted = useIsMounted();
 
   const runSafeAsyncAction = useCallback((callback) => {
-    if (isMounted) {
+    if (isMounted()) {
       callback();
     }
   }, [isMounted]);
